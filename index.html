@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroDyne Engineering</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container-fluid">
+            <!-- Logo and Company Name -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Images/logo.jpeg" alt="Company Logo" class="rounded-circle me-2"
+                    style="width: 40px; height: 40px;">
+                <span class="fw-bold">MicroDyne Engineering</span>
+            </a>
+            <!-- Toggler for mobile view -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item dropdown custom-dropdown">
+                        <a class="nav-link" href="#featured-products" id="productsDropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Product 1</a></li>
+                            <li><a class="dropdown-item" href="#">Product 2</a></li>
+                            <li><a class="dropdown-item" href="#">Product 3</a></li>
+                            <li><a class="dropdown-item" href="#">Product 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Icon (Bottom-Right) -->
+    <a href="https://wa.me/9082121601" target="_blank" class="btn btn-success whatsapp-btn">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Phone Icon (Bottom-Left) -->
+    <a href="tel:+9082121601" class="btn btn-primary phone-btn">
+        <i class="bi bi-telephone"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="btn btn-secondary scroll-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <video id="hero-video" autoplay loop muted>
+            <source src="Images/video 2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="overlay-content">
+            <div class="typewriter">
+                <h1>Welcome to Micro Dyne Engineering</h1>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid iusto totam laboriosam reiciendis omnis
+                nisi magni autem placeat consequuntur earum. Asperiores laboriosam vitae molestias placeat distinctio
+                veniam voluptates ducimus aliquid.
+            </p>
+            <button class="cta-button" onclick="scrollToAbout()">Learn More</button>
+        </div>
+
+        <!-- Image Carousel (Right-Bottom) -->
+        <div class="image-carousel">
+            <img src="Images/1.png" alt="Image 1" class="carousel-image">
+            <img src="Images/2.png" alt="Image 2" class="carousel-image">
+            <img src="Images/3.png" alt="Image 3" class="carousel-image">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+
+    <!-- About Us Section -->
+    <section id="about" class="container py-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="display-4">About Us</h2>
+                <p>
+                    MicroDyne Engineering is a leading company specializing in innovative engineering solutions. With a
+                    team of skilled professionals, we are dedicated to delivering high-quality services and products
+                    that meet the needs of our clients. Our mission is to drive technological advancement and improve
+                    the efficiency of businesses worldwide.
+                </p>
+                <p>
+                    Our expertise spans across various industries, including manufacturing, automation, and electronics.
+                    We believe in creating sustainable solutions that not only meet the current demands but also
+                    anticipate the future needs of our clients.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <img src="Images/About.jpeg" alt="About Us" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <div class="featured-products" id="featured-products">
+        <h2>FEATURED PRODUCTS</h2>
+        <div class="underline"></div>
+        <div class="product-slider">
+            <div class="product-track">
+                <!-- Example products -->
+                <div class="product">
+                    <img src="Images/pr1.png" alt="SPX">
+                    <h3>SPX</h3>
+                    <p>Mechanical Seals for Pumps<br>Split Seals</p>
+                </div>
+                <div class="product">
+                    <img src="Images/pr2.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </div>
+                <div class="product">
+                    <img src="Images/pr3.png" alt="SBPV/SBFV">
+                    <h3>SBPV/SBFV</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </div>
+                <div class="product">
+                    <img src="Images/pr4.png" alt="SBPV/SBFV">
+                    <h3>SBPV/SBFV</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </div>
+                <div class="product">
+                    <img src="Images/pr18.png" alt="SBPV/SBFV">
+                    <h3>SBPV/SBFV</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Gallery Section -->
+    <!-- Gallery Section -->
+    <section class="product-gallery">
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(SBPV/SBFV)"
+                    target="_blank">
+                    <img src="Images/pr1.png" alt="SBPV/SBFV">
+                    <h3>SBPV/SBFV</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/pr2.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/pr3.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/pr4.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/pr5.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/pr6.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/PR7.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/PR8.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/PR9.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://wa.me/9082121601?text=Hello%20I%20am%20interested%20in%20Mechanical%20Seals%20for%20Pumps%20(PP%20-%20S)"
+                    target="_blank">
+                    <img src="Images/PR11.png" alt="PP - S">
+                    <h3>PP - S</h3>
+                    <p>Mechanical Seals for Pumps<br>Engineered Seals</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Us Heading -->
+                <div class="col-12 text-center mb-4">
+                    <h2 class="contact-title">Contact Us</h2>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <!-- Contact Details -->
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="contact-info p-4">
+                        <h4 class="info-title">Our Office</h4>
+                        <ul class="list-unstyled mt-4">
+                            <li class="mb-3">
+                                <i class="bi bi-geo-alt-fill text-highlight"></i>
+                                <span><strong>Location:</strong>Pathanwadi Malad East</span>
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-telephone-fill text-highlight"></i>
+                                <span>
+                                    <strong>Phone:</strong>
+                                    <a href="javascript:void(0);" id="phone-number"
+                                        onclick="copyToClipboard('+91-9082121601')"
+                                        style="color: inherit; text-decoration: none;">
+                                        +91-9082121601
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="mb-3">
+                                <i class="bi bi-envelope-fill text-highlight"></i>
+                                <span>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:microdyne@gmail.com" style="color: inherit; text-decoration: none;">
+                                        microdyne@gmail.com
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="contact-form bg-light p-4 rounded">
+                        <h4 class="form-title mb-4 text-center">Send Message</h4>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your full name"
+                                    pattern="[A-Za-z\s]+" title="Please enter only letters." required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                    required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Type your message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Write your message..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-highlight w-100">Send</button>
+                        </form>
+                    </div>
+                </div>
+    </section>
+
+
+    <footer class="custom-footer">
+        <div class="container text-center py-3">
+            <p class="mb-0">
+                The product information on this website has been in its existence since 2012.
+            </p>
+            <p class="mb-0">
+                2012 - 2024 © All Rights Reserved by
+                <a href="#" class="footer-link">MicroDyne Engineering</a>.
+                <!-- Developed by <a href="#" class="footer-link">NWDCo</a>. -->
+            </p>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

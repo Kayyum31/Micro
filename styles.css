@@ -1,0 +1,604 @@
+   /* Navbar Background and Transition */
+   .custom-navbar {
+    background-color: #96bdf7;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Navbar Sticky on Scroll */
+.custom-navbar.scrolled {
+    background-color: #3498db !important;
+}
+
+/* Hover Effects for Links */
+.nav-link {
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Styling */
+.custom-dropdown:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    margin-top: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove Overlap with Navbar */
+.dropdown-menu {
+    display: none;
+    min-width: 10rem;
+    background-color: #fff;
+    border: none;
+    padding: 0.5rem 0;
+}
+
+/* Dropdown Item Hover Effect */
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #3498db;
+}
+
+/* Logo CSS */
+
+/* Common Styles for Floating Buttons */
+.whatsapp-btn, .phone-btn {
+    position: fixed;
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-decoration: none;
+}
+
+/* WhatsApp Button (Bottom-Right) */
+.whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    animation: pulse 1s infinite; /* Adding blinking effect */
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Phone Button (Bottom-Left) */
+.phone-btn {
+    bottom: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: white;
+    animation: pulse 1s infinite; /* Adding blinking effect */
+}
+
+.phone-btn:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Animation for Blinking Effect */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.2); /* Slightly bigger */
+    }
+}
+
+
+/* Scroll to Top Button Styling */
+.scroll-to-top {
+    position: fixed;
+    bottom: 80px; /* Slightly above WhatsApp button */
+    right: 19px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: white;
+    font-size: 24px;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#hero-video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Content overlay positioning */
+.overlay-content {
+    position: absolute; /* Center content */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Typewriter effect styling */
+.typewriter {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Paragraph styling within overlay content */
+.overlay-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Call to Action button styling */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .overlay-content {
+        width: 80%;
+        padding: 30px;
+    }
+
+    .typewriter {
+        font-size: 2.5rem;
+    }
+
+    .overlay-content p {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-content {
+        width: 85%;
+        padding: 20px;
+    }
+
+    .typewriter {
+        font-size: 2.2rem;
+    }
+
+    .overlay-content p {
+        font-size: 1.4rem;
+    }
+
+    .cta-button {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .typewriter {
+        font-size: 1.8rem;
+    }
+
+    .overlay-content p {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 8px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* About Section */
+#about img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Image Carousel (Right-Bottom) */
+.image-carousel {
+    position: absolute; /* Changed to absolute to keep it on the video */
+    bottom: 10%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+    z-index: 2; /* Ensures it stays above the video but below overlay content */
+}
+
+.image-carousel img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px 0;
+    transition: transform 0.5s ease-in-out;
+    display: none;
+}
+
+/* Display the first image initially */
+.image-carousel img:first-child {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .image-carousel {   
+        display: flex; /* Ensure it is visible */
+        bottom: 5%; /* Mobile ke liye adjust position */
+        right: 5%;
+    }
+
+    .image-carousel img {
+        width: 100px; /* Mobile screen par image chhoti ho */
+        height: 100px;
+    }
+}
+
+/* Featured Products Section */
+.featured-products {
+    text-align: center;
+    background-color: #04284a;
+    color: white;
+    padding: 50px 20px;
+}
+
+.featured-products h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.featured-products .underline {
+    width: 80px;
+    height: 3px;
+    background-color: #3498db;
+    margin: 10px auto 20px;
+}
+
+/* Product Slider */
+.product-slider {
+    overflow: hidden;
+    position: relative;
+    max-width: 100%; /* Adjust as needed */
+}
+.product-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-track {
+    display: flex;
+    gap: 20px; /* Space between products */
+    animation: scroll-slider 20s linear infinite; /* Infinite scrolling */
+    will-change: transform;
+}
+
+.product {
+    flex: 0 0 calc(20% - 20px); /* Show 5 products at a time, adjust for spacing */
+    margin: 0; /* Remove additional margin */
+    background-color: white;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #04284a;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1); /* Slight zoom effect on hover */
+}
+
+.product img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.product:hover img {
+    transform: scale(1.1); /* Enlarge image on hover */
+}
+
+.product h3 {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 0.85rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product {
+        flex: 0 0 calc(33.33% - 20px); /* Show 3 products on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 0 0 calc(50% - 20px); /* Show 2 products on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .product {
+        flex: 0 0 calc(100% - 20px); /* Show 1 product on very small screens */
+    }
+}
+
+/*Gallery ka*/
+
+/* Gallery Section Styles */
+/* Gallery Styles */
+/* Gallery Section Styles */
+.product-gallery {
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Light background */
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Default to 5 columns */
+    gap: 20px; /* Space between items */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+    width: 100%; /* Image fills the container */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.gallery-item h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.gallery-item p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* Make the grid responsive */
+@media screen and (max-width: 1200px) {
+    .gallery-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row on medium screens */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on mobile screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* 1 item per row on very small screens */
+    }
+}
+
+/* General Styling */
+.contact-section {
+    background: url('Images/background.jpg') no-repeat center center/cover;
+    padding: 60px 15px;
+    color: #000; /* Text color black */
+  }
+
+  /* Heading Styling */
+  .contact-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #3498db !important; /* Blue Theme */
+    margin-bottom: 10px;
+  }
+
+  .contact-subtitle {
+    color: #000; /* Black text */
+    font-size: 1rem;
+  }
+
+  /* Contact Info Styling */
+  .contact-info {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    color: #000; /* Black text */
+    padding: 20px;
+  }
+
+  .info-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db !important; /* Blue Theme */
+  }
+
+  .contact-info ul {
+    padding: 0;
+    list-style: none;
+  }
+
+  .contact-info li i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #3498db !important; /* Blue Theme */
+  }
+
+  .contact-info li span {
+    font-size: 1rem;
+    color: #000; /* Black text */
+  }
+
+  /* Form Styling */
+  .contact-form {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #3498db !important; /* Blue Theme */
+  }
+
+  .form-control {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .form-control:focus {
+    border-color: #3498db !important;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5); /* Highlighted border */
+  }
+
+  .btn-highlight {
+    background-color: #3498db !important;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .btn-highlight:hover {
+    background-color: #2980b9;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 2.2rem;
+    }
+
+    .contact-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .contact-info ul li span {
+      font-size: 0.85rem;
+    }
+  }
+
+
+
+  .custom-footer {
+    background-color: #002e64; /* Navy blue background color */
+    color: #d6d6d6; /* Light gray text color */
+    font-size: 0.9rem; /* Slightly smaller text size */
+  }
+  
+  .custom-footer p {
+    margin: 0;
+  }
+  
+  .custom-footer .footer-link {
+    color: #3498db; /* Light blue color for links */
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  /* .custom-footer .footer-link:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #ffffff; /* White color on hover */
+  } */
+
+  
